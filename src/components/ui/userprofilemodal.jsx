@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User } from '@/entities/User';
 import { Task } from '@/entities/Task';
-import { Chat } from '@/entities/Chat';
+import { Chat } from '@/entities/chat';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { X, User as UserIcon, CheckCircle, TrendingUp, Clock, MessageSquare, ShieldCheck } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import { getAuth } from 'firebase/auth';
-
 export default function UserProfileModal({ userId, onClose }) {
   const [profile, setProfile] = useState(null);
   const [completedTasks, setCompletedTasks] = useState([]);
