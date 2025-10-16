@@ -9,7 +9,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { X, User as UserIcon, CheckCircle, TrendingUp, Clock, MessageSquare, ShieldCheck } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import { getAuth } from 'firebase/auth';
-
 export default function UserProfileModal({ userId, onClose }) {
   const [profile, setProfile] = useState(null);
   const [completedTasks, setCompletedTasks] = useState([]);
